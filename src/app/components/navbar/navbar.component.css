@@ -1,0 +1,25 @@
+.dimLogo {
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  float: left;
+
+}
+
+ul a {
+  clear: both;
+  margin-top: 25px;
+  padding-left: 35px;
+}
+
+.form-control{
+  min-width: 350px;
+}
+
+.carr{
+  color: brown;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
