@@ -1,0 +1,9 @@
+<div class="container m-auto row">
+  <div class="row">
+    <div class="col" *ngFor="let produto of produtos">
+      <app-hard-soft-accessory [infoProduto] = produto (onCarrinho)="addProdutoCarrinho($event)">
+        <!-- -->
+      </app-hard-soft-accessory>
+  </div>
+</div>
+

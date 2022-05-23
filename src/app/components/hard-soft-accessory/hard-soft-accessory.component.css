@@ -1,0 +1,32 @@
+.price {
+  font-weight: bold;
+  color: #21af14;
+  font-size: 25px;
+}
+
+.ldesc {
+  text-decoration: none;
+  color: black;
+}
+
+.star {
+  font-size: 28px;
+}
+
+
+button {
+  background-color: #849183;
+  color: antiquewhite;
+  font-weight: bold;
+
+}
+
+.riscado{
+  text-decoration: line-through;
+}
+
+.rate{
+  display: block;
+}
+
+
