@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" class="m-1" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="mb-3">
+            <h3 text-align="center" position="absolute" display="block">LOGIN . . .
+                <i class="bi bi-person-check">
+                </i>
+            </h3>
+            <br />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input formControlName="email" id="email" type="email" class="form-control" placeholder="Digite o seu Email"
+                required />
+            <small class="text-danger" *ngIf="email?.touched && email?.invalid">
+                <span *ngIf="email?.hasError('required')">Campo email é obrigatório</span>
+                <span *ngIf="email?.hasError('email')">O email é inválido</span>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input formControlName="senha" id="senha" type="password" class="form-control"
+                placeholder="Digite a sua Senha" required />
+            <small class="text-danger" *ngIf="senha?.touched && senha?.invalid">
+                <span *ngIf="senha?.hasError('required')">A senha é obrigatória</span>
+                <span *ngIf="senha?.hasError('minlength')">Digite no mínimo é 8 caracteres</span>
+            </small>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+    </div>
+</form>
