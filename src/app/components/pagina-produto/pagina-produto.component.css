@@ -1,0 +1,25 @@
+.center {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.price {
+  font-weight: bold;
+  color: #21af14;
+  font-size: 25px;
+}
+
+.desc{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ldesc {
+
+}
+
+.star {
+  font-size: 32px;
+  text-decoration: none;
+  color: rgb(247, 176, 22);
+}

@@ -4,8 +4,11 @@ import { PaginaProdutoComponent } from './components/pagina-produto/pagina-produ
 import { ProdutosComponent } from './components/produtos/produtos.component';
 
 const routes: Routes = [
+
   { path: 'produtos', component: ProdutosComponent},
+  { path: 'pagina/produto/:id', component: PaginaProdutoComponent},
   { path: 'pagina/produto', component: PaginaProdutoComponent}
+
 ];
 
 @NgModule({

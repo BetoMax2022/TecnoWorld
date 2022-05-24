@@ -20,13 +20,17 @@ export class ProdutosComponent implements OnInit {
     console.log(this.carrinho);
   }
 
-
   produtosNoCarrinho(produto: Produto){
     return this.carrinho.includes(produto);
   }
 
+
+
   ngOnInit(): void {
    this.produtos = this.produtosService.produtos;
   }
+
+
+
 
 }

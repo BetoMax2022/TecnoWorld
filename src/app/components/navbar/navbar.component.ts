@@ -1,6 +1,7 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Produto } from 'src/app/models/produto';
-import { ProdutosService } from 'src/app/shared/services/produtos/produtos.service';
+
+
 
 
 
@@ -11,18 +12,21 @@ import { ProdutosService } from 'src/app/shared/services/produtos/produtos.servi
 })
 export class NavbarComponent implements OnInit {
 
-
   nomeDoApp: String = 'TecnoWorld';
   isMenuCollapsed = true;
 
+  @Output('onCarrinho') onCarrinho = new EventEmitter<Produto>();
 
   constructor() { }
 
+  carrinho: Produto[] = [];
 
+  addCarrinho(produto: Produto) {
+    this.carrinho.push(produto);
 
-
-
+  }
   ngOnInit(): void {
+
   }
 
 
