@@ -8,8 +8,6 @@ import { ProdutosService } from 'src/app/shared/services/produtos/produtos.servi
     styleUrls: ['./pagina-produto.component.css']
 })
 
-
-
 export class PaginaProdutoComponent implements OnInit {
 
   currentRate = 0;

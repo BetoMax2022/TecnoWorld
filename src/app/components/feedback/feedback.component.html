@@ -1,0 +1,37 @@
+<div class="formulario">
+  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="m-1 forms">
+
+      <div class="mb-3">
+          <h5><label for="nome" class="form-label">Avalie como foi a sua experiência de compra</label></h5>
+      </div>
+
+      <div class="mb-3">
+          <label for="email" class="form-label">Digite seu email</label>
+          <input formControlName="email" id="email" type="email" class="form-control" placeholder="Digite seu email..."/>
+          <small class="text-danger" *ngIf="email?.touched && email?.invalid">
+              <span *ngIf="email?.hasError('required')">O email é obrigatório</span>
+              <span *ngIf="email?.hasError('email')">O email é inválido</span>
+          </small>
+      </div>
+
+      <div class="mb-3">
+          <label for="comentario" class="form-label">Comentário</label>
+          <textarea formControlName="comentario" class="form-control" id="comentario" rows="3" placeholder="Escreva aqui o seu comentário..."></textarea>
+          <small class="text-danger" *ngIf="comentario?.touched && comentario?.invalid">
+              <span *ngIf="comentario?.hasError('required')">O comentário é obrigatório</span>
+              <span *ngIf="comentario?.hasError('minlength')">O mínimo é 10 caracteres</span>
+              <span *ngIf="comentario?.hasError('maxlength')">O máximo é 300 caracteres</span>
+          </small>
+      </div>
+
+   <div class="mb-3">
+      <label for="nota" class="form-label">Nota</label>
+      <input formControlName="nota" id="nota" type="number" class="form-control" min="0" max="5" placeholder="Escolha uma nota de 1 à 5">
+      <small class="text-danger" *ngIf="nota?.touched && nota?.invalid">
+        <span *ngIf="nota?.hasError('required')">A nota é obrigatória!</span>
+      </small>
+    </div>
+      <button class="btn btn-primary" [disabled]="feedbackForm.invalid">Enviar</button>
+  </form>
+  </div>
+

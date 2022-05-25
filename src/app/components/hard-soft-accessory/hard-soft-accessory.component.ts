@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Produto } from 'src/app/models/produto';
 
 
-
 @Component({
   selector: 'app-hard-soft-accessory',
   templateUrl: './hard-soft-accessory.component.html',
@@ -10,20 +9,10 @@ import { Produto } from 'src/app/models/produto';
 })
 
 export class HardSoftAccessoryComponent implements OnInit {
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
-
-
-
-
   @Input('infoProduto') produto!: Produto;
   @Output('onCarrinho') onCarrinho = new EventEmitter<Produto>();
 
+  constructor() { }
 
 
   perc?: number;
@@ -43,7 +32,9 @@ export class HardSoftAccessoryComponent implements OnInit {
     this.onCarrinho.emit(this.produto);
   }
 
+  ngOnInit(): void {
 
+  }
 
 
 }
