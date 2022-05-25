@@ -2,7 +2,7 @@
 <div class="card mt-5" style="width: 14rem;">
   <img [src]="produto.imagem" class="card-img-top" alt="...">
   <div class="card-body">
-    <a routerLink="/pagina/produto/{{produto.id}}" class="ldesc"><h5 class="card-title" (click)="aoCarrinho()">{{ produto.descricao}}</h5></a>
+    <a routerLink="/pagina/produto/{{produto.id}}" class="ldesc"><h5 class="card-title">{{ produto.descricao}}</h5></a>
     <div [ngSwitch]="produto.classificacao">
       <span class="badge bg-danger" *ngSwitchCase="'hardware'">Harduare</span>
       <span class="badge bg-success" *ngSwitchCase="'software'">Software</span>
@@ -17,3 +17,5 @@
 </div>
 <button class="btn mt-1"  style="width: 14rem;" (click)="aoCarrinho()">Adiconar no carrinho</button>
 </div>
+
+
