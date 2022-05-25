@@ -13,20 +13,24 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
 @NgModule({
   declarations: [
+    NavbarComponent,
+    HomeComponent,
     AppComponent,
     LoginComponent,
-    NavbarComponent,
     PaginaProdutoComponent,
     HardSoftAccessoryComponent,
     ProdutosComponent,
     CadastroComponent,
     FeedbackComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
 
   imports: [
@@ -37,7 +41,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ReactiveFormsModule,
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pt-br' }
+    { provide: LOCALE_ID, useValue: 'pt' }
   ],
   bootstrap: [AppComponent]
 })
