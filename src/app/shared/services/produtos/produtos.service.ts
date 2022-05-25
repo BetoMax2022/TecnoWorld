@@ -101,10 +101,10 @@ export class ProdutosService {
   ];
 
 
-  constructor(private router: Router) { }
+//  constructor(private router: Router) { }
 
-  onSelect(id: number){
-   this.router.navigate(['/produtos', id])
-  }
+  // onSelect(id: number){
+  //  this.router.navigate(['/produtos', id])
+  // }
 
 }
